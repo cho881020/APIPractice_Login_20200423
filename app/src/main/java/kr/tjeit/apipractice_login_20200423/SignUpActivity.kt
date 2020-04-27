@@ -42,6 +42,13 @@ class SignUpActivity : BaseActivity() {
                     else {
                         
 //                        서버에서 내려주는 메세지를 토스트로 출력
+//                        cho881020 아이디 / asdf 아이디로 가입.
+//                        "" 으로 가입하려고 하면 빈값 X.
+
+                        val message = json.getString("message")
+                        runOnUiThread {
+                            Toast.makeText(mContext, message, Toast.LENGTH_SHORT).show()
+                        }
                         
                     }
 
